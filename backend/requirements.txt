@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pymongo
+motor
+pandas
+numpy
+scikit-learn
+shap
+transformers
+torch
+python-multipart
+pydantic
+python-dotenv
