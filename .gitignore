@@ -1,0 +1,48 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ===== Virtual Environments =====
+.venv/
+backend/venv/
+venv/
+env/
+
+# ===== Database =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== ML Models (large binaries — regenerate with train_models.py) =====
+trained_models/*.pkl
+
+# ===== Datasets (large files) =====
+datasets/creditcard.csv
+datasets/creditcard_mapped.csv
+datasets/*_processed.csv
+
+# ===== Environment Variables =====
+.env
+.env.*
+!.env.example
+
+# ===== Frontend =====
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# ===== Personal Notes =====
+NOTES.md
