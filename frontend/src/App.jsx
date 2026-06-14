@@ -48,12 +48,6 @@ function App() {
           <button className="p-2 text-slate-700 hover:text-slate-900 rounded-lg hover:bg-gray-200/50 transition-colors">
             <Menu size={20} />
           </button>
-          
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-8 rounded-full bg-primary/20 border border-primary flex items-center justify-center text-primary font-bold">
-              A
-            </div>
-          </div>
         </header>
 
         <main className="flex-1 overflow-auto p-8 custom-scrollbar">
