@@ -65,7 +65,7 @@ const PortfolioOverview = () => {
   const fetchStats = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:8000/api/stats');
+      const response = await axios.get('/_/backend/api/stats');
       const data = response.data;
       setStats({
         totalLoans: data.totalLoans,
@@ -105,7 +105,7 @@ const PortfolioOverview = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/news');
+        const response = await axios.get('/_/backend/api/news');
         setNews(response.data);
       } catch (error) {
         console.error("Failed to fetch news:", error);
@@ -131,7 +131,7 @@ const PortfolioOverview = () => {
     try {
       await minUploadDelay;
 
-      await axios.post('http://localhost:8000/api/upload', formData, {
+      await axios.post('/_/backend/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

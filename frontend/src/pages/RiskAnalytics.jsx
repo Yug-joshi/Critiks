@@ -63,7 +63,7 @@ const RiskAnalytics = () => {
   const fetchAnalytics = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:8000/api/risk-analytics');
+      const response = await axios.get('/_/backend/api/risk-analytics');
       setAnalytics(response.data);
     } catch (error) {
       console.error('Failed to fetch risk analytics:', error);

@@ -14,7 +14,7 @@ const ScenarioSimulator = () => {
     const simulateRisk = async () => {
       setLoading(true);
       try {
-        const response = await axios.post('http://localhost:8000/api/simulate', {
+        const response = await axios.post('/_/backend/api/simulate', {
           income: Number(income),
           debt: Number(debt),
           loan_amount: Number(loanAmount)

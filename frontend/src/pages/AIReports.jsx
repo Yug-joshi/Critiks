@@ -14,7 +14,7 @@ const AIReports = () => {
 
   const fetchReportHistory = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/api/reports');
+      const res = await axios.get('/_/backend/api/reports');
       setReportHistory(res.data);
       if (res.data.length > 0) {
         setReport(res.data[0].report_text);
@@ -27,13 +27,13 @@ const AIReports = () => {
   const generateReport = async () => {
     setIsGenerating(true);
     try {
-      const statsRes = await axios.get('http://localhost:8000/api/stats');
+      const statsRes = await axios.get('/_/backend/api/stats');
       const stats = { 
         total: statsRes.data.totalLoans, 
         high_risk: statsRes.data.highRiskAccounts, 
         fraud: statsRes.data.fraudAlerts 
       };
-      const response = await axios.post('http://localhost:8000/api/report', stats);
+      const response = await axios.post('/_/backend/api/report', stats);
       setReport(response.data.report_text);
       fetchReportHistory();
     } catch (error) {

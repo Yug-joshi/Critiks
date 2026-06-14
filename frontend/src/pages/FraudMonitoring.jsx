@@ -10,7 +10,7 @@ const FraudMonitoring = () => {
 
   const fetchFraudData = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/fraud-alerts');
+      const response = await axios.get('/_/backend/api/fraud-alerts');
       setData(response.data);
     } catch (error) {
       console.error('Failed to fetch fraud alerts:', error);
